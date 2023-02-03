@@ -24,7 +24,7 @@ const { system, osInfo } = require('systeminformation');
 module.exports = {
     getDeviceInfo: async () => {
         try {
-            const { manufacturer, model, uuid } = await system();
+            const { manufacturer, model } = await system();
             const { platform, distro, codename, build: version } = await osInfo();
 
             return {
@@ -32,7 +32,6 @@ module.exports = {
                 model,
                 platform: platform === 'darwin' ? codename : distro,
                 version,
-                uuid,
                 isVirtual: false
             };
         } catch (e) {

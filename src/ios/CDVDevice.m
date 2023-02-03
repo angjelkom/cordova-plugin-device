@@ -92,7 +92,7 @@
              @"model": [device modelVersion],
              @"platform": @"iOS",
              @"version": [device systemVersion],
-             @"uuid": [self uniqueAppInstanceIdentifier:device],
+            //  @"uuid": [self uniqueAppInstanceIdentifier:device],
              @"cordova": [[self class] cordovaVersion],
              @"isVirtual": @([self isVirtual]),
              @"isiOSAppOnMac": @([self isiOSAppOnMac])
